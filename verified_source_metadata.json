@@ -1,0 +1,34 @@
+{
+  "https://arxiv.org/abs/2510.18245": {
+    "title": "Scaling Laws Meet Model Architecture: Toward Inference-Efficient LLMs",
+    "date": "2025-10-21"
+  },
+  "https://arxiv.org/abs/2401.02385": {
+    "title": "TinyLlama: An Open-Source Small Language Model",
+    "date": "2024-01-04"
+  },
+  "https://huggingface.co/papers/2405.04532": {
+    "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
+    "date": "2024-05-07"
+  },
+  "https://huggingface.co/papers/2604.19157": {
+    "title": "SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving",
+    "date": "2026-04-21"
+  },
+  "https://arxiv.org/abs/2507.04136": {
+    "title": "A Technical Survey of Reinforcement Learning Techniques for Large Language Models",
+    "date": "2025-07-05"
+  },
+  "https://arxiv.org/abs/2405.00451": {
+    "title": "Monte Carlo Tree Search Boosts Reasoning via Iterative Preference Learning",
+    "date": "2024-05-01"
+  },
+  "https://arxiv.org/abs/2410.16033": {
+    "title": "TreeBoN: Enhancing Inference-Time Alignment with Speculative Tree-Search and Best-of-N Sampling",
+    "date": "2024-10-18"
+  },
+  "https://arxiv.org/abs/2502.06807": {
+    "title": "Competitive Programming with Large Reasoning Models",
+    "date": "2025-02-03"
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "n": 1,
+    "id": "1803.10122",
+    "url": "https://arxiv.org/abs/1803.10122",
+    "title": "World Models",
+    "date": "2018-03-27",
+    "source": "web"
+  },
+  {
+    "n": 2,
+    "id": "2de5d16682c3c35007e4e92982f1a2ba",
+    "url": "https://papers.neurips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf",
+    "title": "Recurrent World Models Facilitate Policy Evolution",
+    "date": "2018-12-03",
+    "source": "web"
+  },
+  {
+    "n": 3,
+    "id": "2301.04104",
+    "url": "https://arxiv.org/abs/2301.04104",
+    "title": "Mastering diverse control tasks through world models (DreamerV3)",
+    "date": "2025-04-02",
+    "source": "web"
+  },
+  {
+    "n": 4,
+    "id": "2402.15391",
+    "url": "https://huggingface.co/papers/2402.15391",
+    "title": "Genie: Generative Interactive Environments",
+    "date": "2024-02-23",
+    "source": "hf-search"
+  },
+  {
+    "n": 5,
+    "id": "2610.10515",
+    "url": "https://huggingface.co/papers/2610.10515",
+    "title": "RoboJEPA: Scaling Robotic Latent World Models",
+    "date": "2026-10-07",
+    "source": "hf-daily"
+  },
+  {
+    "n": 6,
+    "id": "2404.08471",
+    "url": "https://huggingface.co/papers/2404.08471",
+    "title": "V-JEPA: Revisiting Feature Prediction for Learning Visual Representations from Video",
+    "date": "2024-02-15",
+    "source": "hf-search"
+  },
+  {
+    "n": 7,
+    "id": "2602.08971",
+    "url": "https://huggingface.co/papers/2602.08971",
+    "title": "WorldArena: A Unified Benchmark for Evaluating Perception and Functional Utility of Embodied World Models",
+    "date": "2026-02-09",
+    "source": "hf-search"
+  },
+  {
+    "n": 8,
+    "id": "2605.10434",
+    "url": "https://huggingface.co/papers/2605.10434",
+    "title": "WorldReasonBench: Human-Aligned Stress Testing of Video Generators",
+    "date": "2026-05-11",
+    "source": "hf-search"
+  },
+  {
+    "n": 9,
+    "id": "2405.03520",
+    "url": "https://huggingface.co/papers/2405.03520",
+    "title": "Is Sora a World Simulator? A Comprehensive Survey on General World Models",
+    "date": "2024-05-06",
+    "source": "hf-search"
+  },
+  {
+    "n": 10,
+    "id": "pearce25a",
+    "url": "https://proceedings.mlr.press/v267/pearce25a.html",
+    "title": "Scaling Laws for Pre-training Agents and World Models",
+    "date": "2025-10-06",
+    "source": "web"
+  },
+  {
+    "n": 11,
+    "id": "3746449",
+    "url": "https://dl.acm.org/doi/10.1145/3746449",
+    "title": "A Comprehensive Survey of World Models",
+    "date": "2025-09-09",
+    "source": "web"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "n": 1,
+    "id": "2510.18245",
+    "url": "https://arxiv.org/abs/2510.18245",
+    "title": "Scaling Laws Meet Model Architecture: Toward Inference-Efficient LLMs",
+    "date": "2025-10-21",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "2402.07871",
+    "url": "https://arxiv.org/abs/2402.07871",
+    "title": "Scaling Laws for Fine-Grained Mixture of Experts",
+    "date": "2024-02-12",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "2405.04532",
+    "url": "https://huggingface.co/papers/2405.04532",
+    "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
+    "date": "2024-05-07",
+    "source": "hf-daily"
+  },
+  {
+    "n": 4,
+    "id": "2401.02385",
+    "url": "https://arxiv.org/abs/2401.02385",
+    "title": "TinyLlama: An Open-Source Small Language Model",
+    "date": "2024-01-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 5,
+    "id": "1m4cKCr0vx",
+    "url": "https://openreview.net/forum?id=1m4cKCr0vx",
+    "title": "Scaling Laws for Parameter Pruning in LLMs",
+    "date": "2024-01-01",
+    "source": "web"
+  },
+  {
+    "n": 6,
+    "id": "calmops",
+    "url": "https://calmops.com/algorithms/llm-quantization-gptq-awq-gguf/",
+    "title": "LLM Quantization: GPTQ, AWQ, and GGUF for Efficient Deployment",
+    "date": "2026-03-19",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "2604.19157",
+    "url": "https://huggingface.co/papers/2604.19157",
+    "title": "SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving",
+    "date": "2026-04-21",
+    "source": "hf-daily"
+  },
+  {
+    "n": 8,
+    "id": "2412.08905",
+    "url": "https://arxiv.org/abs/2412.08905",
+    "title": "Phi-4 Technical Report",
+    "date": "2024-12-12",
+    "source": "arxiv"
+  },
+  {
+    "n": 9,
+    "id": "8766fbc68e",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/8766fbc68e1ed1cdef712ce273e0a363-Paper-Conference.pdf",
+    "title": "DistillSpec: Improving Speculative Decoding via Knowledge Distillation",
+    "date": "2024-05-01",
+    "source": "web"
+  }
+]

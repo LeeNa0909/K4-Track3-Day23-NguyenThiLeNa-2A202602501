@@ -59,9 +59,30 @@ Lab/
 └── reports/                  báo cáo sinh ra (bạn commit vào repo nộp)
 ```
 
-Mỗi tệp "SINH VIÊN CÀI ĐẶT" là **pseudo-code chạy được** (import được): các hàm có docstring mô tả việc cần làm, các `TODO n` đánh số theo `GUIDE.md`, thân hàm đang `raise NotImplementedError`.
+Mỗi tệp "SINH VIÊN CÀI ĐẶT" đã có phần triển khai; các nhãn `TODO n`, docstring và pseudo-code gốc được giữ lại để đối chiếu với `GUIDE.md`.
 
 ## 4. Cài đặt
+
+### Windows PowerShell (OpenRouter)
+
+```powershell
+py -3.12 -m venv .venv  # Bỏ qua bước này nếu đã có .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env
+```
+
+Mở `.env` và điền API key OpenRouter vào `LAB_API_KEY`. Cấu hình mẫu đã đặt
+`LAB_BASE_URL=https://openrouter.ai/api/v1` và model hỗ trợ tool calling. Không
+cần `OPENAI_API_KEY` hoặc khóa trực tiếp từ Google cho cấu hình này. Có thể đổi
+`LAB_MODEL` sang model khác nếu trang OpenRouter của model đó liệt kê hỗ trợ
+[`tools`](https://openrouter.ai/docs/guides/features/tool-calling).
+
+Điền thêm `EXA_API_KEY` để tránh giới hạn tốc độ của Exa. Điền
+`DAYTONA_API_KEY` nếu dùng sandbox Daytona; nếu đã có Docker Desktop, có thể
+thêm `SANDBOX=docker` vào `.env` để dùng Docker cục bộ. Không commit `.env`.
+
+### macOS/Linux
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate      # Python 3.11+
@@ -69,11 +90,11 @@ pip install -r requirements.txt
 cp .env.example .env                                     # rồi điền khóa CỦA BẠN
 ```
 
-Bạn cần ba loại khóa (điền vào `.env`, **không bao giờ commit** `.env`):
+Các khóa của cấu hình OpenRouter (điền vào `.env`, **không bao giờ commit** `.env`):
 
 | Khóa | Lấy ở đâu | Ghi chú |
 |---|---|---|
-| LLM (`LAB_MODEL` + khóa nhà cung cấp) | Nhà cung cấp bạn chọn (OpenAI, Anthropic, Google, OpenRouter, Ollama...) | Mô hình **phải hỗ trợ tool calling**. Chép tên mô hình từ tài liệu của nhà cung cấp. |
+| `LAB_API_KEY` | https://openrouter.ai/settings/keys | Key OpenRouter; `LAB_BASE_URL` và `LAB_MODEL` đã có trong `.env.example`. Model **phải hỗ trợ tool calling**. |
 | `DAYTONA_API_KEY` | https://app.daytona.io | Kiểm tra gói miễn phí / credit hiện hành. Không có tài khoản hoặc hết credit: đặt `SANDBOX=docker` để chạy sandbox trong container Docker cục bộ (xem `.env.example`). |
 | `EXA_API_KEY` (khuyến nghị) | https://dashboard.exa.ai/api-keys | Có thể chạy không khóa, nhưng bản miễn phí của MCP bị giới hạn tốc độ rất nhanh. |
 
@@ -91,6 +112,18 @@ python research.py "survey about world model"
 ```
 
 Kết quả nằm ở `reports/survey-about-world-model.md` cùng `.sources.json` và `.meta.json`.
+
+Trên PowerShell, sau khi điền khóa trong `.env`, có thể chạy đủ 5 chủ đề:
+
+```powershell
+Get-Content topics.md | ForEach-Object {
+    if ($_ -match '^\d+\. (.+)$') { python research.py $Matches[1] }
+}
+python self_check.py
+```
+
+Mỗi lần chạy cần kết nối mạng, dùng token OpenRouter và có thể dùng credit của Exa/Daytona.
+Các kiểm tra cục bộ không dùng API key: `python -m unittest discover -s tests -v`.
 
 ## 6. Chủ đề và nộp bài
 

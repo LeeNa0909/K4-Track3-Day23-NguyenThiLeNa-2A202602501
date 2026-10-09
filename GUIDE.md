@@ -55,6 +55,7 @@ curl -s -X POST https://mcp.exa.ai/mcp \
 - Lỗi JSON-RPC có khóa `error` thay cho `result`: biến nó thành lỗi.
 - **Cẩn thận với giới hạn tốc độ.** Bản miễn phí không trả HTTP 429: nó trả **HTTP 200** kèm một thông báo trong văn bản, và đặt cờ trong `result._meta`. Hãy chạy `curl` ở trên vài lần liên tiếp và nhìn kỹ `result._meta`. Nếu bạn không phát hiện ra, agent sẽ coi thông báo giới hạn tốc độ là "nội dung trang" và nghiên cứu sai. Phát hiện cờ đó và **retry**. Khi một người dùng thì thường hết sau chừng 20 giây; khi **cả lớp dùng chung một IP** thì có thể kéo dài nhiều phút, vượt mọi số lần retry hợp lý — vì vậy **hãy lấy `EXA_API_KEY` miễn phí** trước buổi lab, và cho Exa `cap` dài (ví dụ 60 giây) với đủ số lần thử.
 - Khóa tùy chọn `EXA_API_KEY` được gắn vào URL của endpoint dưới dạng tham số truy vấn (hiện là `exaApiKey`, ví dụ `https://mcp.exa.ai/mcp?exaApiKey=<khóa>`; chính thông báo giới hạn tốc độ của Exa cũng nêu tên này — kiểm lại trên https://dashboard.exa.ai/api-keys nếu nó đổi). Hệ quả: **khóa có thể lọt vào văn bản của ngoại lệ** (thông báo lỗi `httpx` chứa cả URL). Hãy che khóa trước khi trả `ERROR: ...` cho agent.
+- Cập nhật khi triển khai: [tài liệu Exa MCP hiện hành](https://exa.ai/docs/get-started/exa-mcp) hướng dẫn truyền khóa bằng header `x-api-key`. `tools.py` dùng header này để tránh đặt khóa trong URL; vẫn che khóa nếu nội dung lỗi vô tình chứa khóa.
 - `web_fetch` cắt nội dung còn khoảng 12000 ký tự.
 
 ### 1.5 Đăng ký công cụ (TODO 5)

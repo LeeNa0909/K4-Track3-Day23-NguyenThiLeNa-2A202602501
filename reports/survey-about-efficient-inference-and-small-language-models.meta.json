@@ -1,0 +1,29 @@
+{
+  "topic": "survey about efficient inference and small language models",
+  "model": "google/gemini-3-flash-preview",
+  "elapsed_s": 229.5,
+  "subagent_calls": 7,
+  "tool_calls": {
+    "write_todos": 8,
+    "task": 7,
+    "write_file": 5,
+    "execute": 5,
+    "read_file": 8,
+    "edit_file": 2
+  },
+  "tokens": {
+    "input": 486852,
+    "output": 11460
+  },
+  "n_sources": 9,
+  "source_families": [
+    "arxiv",
+    "hf-daily",
+    "web"
+  ],
+  "revision": {
+    "reason": "source accuracy audit",
+    "elapsed_s": 38.6,
+    "model_calls": 7
+  }
+}

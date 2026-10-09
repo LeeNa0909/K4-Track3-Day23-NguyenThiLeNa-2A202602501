@@ -1,0 +1,106 @@
+[
+  {
+    "n": 1,
+    "id": "2407.16216",
+    "url": "https://arxiv.org/abs/2407.16216",
+    "title": "Reinforcement Learning for LLM Post-Training: A Survey",
+    "date": "2024-07-23",
+    "source": "web"
+  },
+  {
+    "n": 2,
+    "id": "2507.04136",
+    "url": "https://arxiv.org/abs/2507.04136",
+    "title": "A Technical Survey of Reinforcement Learning Techniques for Large Language Models",
+    "date": "2025-07-05",
+    "source": "web"
+  },
+  {
+    "n": 3,
+    "id": "2609.34660",
+    "url": "https://arxiv.org/abs/2609.34660",
+    "title": "Rewarding Novel Deductions: Solver-guided Process Supervision for Logical Reasoning",
+    "date": "2026-09-28",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "2505.15960",
+    "url": "https://huggingface.co/papers/2505.15960",
+    "title": "Training Step-Level Reasoning Verifiers with Formal Verification Tools",
+    "date": "2025-05-21",
+    "source": "hf-search"
+  },
+  {
+    "n": 5,
+    "id": "2410.15115",
+    "url": "https://huggingface.co/papers/2410.15115",
+    "title": "On Designing Effective RL Reward at Training Time for LLM Reasoning",
+    "date": "2024-10-19",
+    "source": "hf-search"
+  },
+  {
+    "n": 6,
+    "id": "openai-o1",
+    "url": "https://openai.com/index/learning-to-reason-with-llms/",
+    "title": "Learning to reason with LLMs (OpenAI o1)",
+    "date": "2024-09-12",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "2412.14135",
+    "url": "https://arxiv.org/abs/2412.14135",
+    "title": "Scaling of Search and Learning: A Roadmap to Reproduce o1",
+    "date": "2024-12-14",
+    "source": "arxiv"
+  },
+  {
+    "n": 8,
+    "id": "2502.06807",
+    "url": "https://arxiv.org/abs/2502.06807",
+    "title": "Competitive Programming with Large Reasoning Models",
+    "date": "2025-02-03",
+    "source": "arxiv"
+  },
+  {
+    "n": 9,
+    "id": "2510.01925",
+    "url": "https://huggingface.co/papers/2510.01925",
+    "title": "Enhancing Large Language Model Reasoning with Reward Models: An Analytical Survey",
+    "date": "2025-10-02",
+    "source": "hf-search"
+  },
+  {
+    "n": 10,
+    "id": "2405.00451",
+    "url": "https://arxiv.org/abs/2405.00451",
+    "title": "Monte Carlo Tree Search Boosts Reasoning via Iterative Preference Learning",
+    "date": "2024-05-01",
+    "source": "web"
+  },
+  {
+    "n": 11,
+    "id": "2410.16033",
+    "url": "https://arxiv.org/abs/2410.16033",
+    "title": "TreeBoN: Enhancing Inference-Time Alignment with Speculative Tree-Search and Best-of-N Sampling",
+    "date": "2024-10-18",
+    "source": "web"
+  },
+  {
+    "n": 12,
+    "id": "2501.11651",
+    "url": "https://huggingface.co/papers/2501.11651",
+    "title": "Advancing Language Model Reasoning through Reinforcement Learning and Inference Scaling (T1)",
+    "date": "2025-01-20",
+    "source": "hf-search"
+  },
+  {
+    "n": 13,
+    "id": "2504.00294",
+    "url": "https://arxiv.org/abs/2504.00294",
+    "title": "Inference-Time Scaling for Complex Tasks: Where We Stand and What Lies Ahead",
+    "date": "2025-03-31",
+    "source": "arxiv"
+  }
+]
