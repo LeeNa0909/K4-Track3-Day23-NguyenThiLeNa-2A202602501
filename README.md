@@ -18,7 +18,7 @@ Sau lab, bạn có thể:
 
 ```mermaid
 flowchart TD
-    U["python research.py &quot;survey about world model&quot;"] --> S["open_sandbox() - Daytona"]
+    U["python research.py &quot;survey about world model&quot;"] --> S["open_sandbox() - Daytona or Docker"]
     S --> L["Lead agent: write_todos, chia N câu hỏi con"]
     L -->|task x N, song song| R["researcher subagents"]
     R --> T1["arxiv_search"]
@@ -60,6 +60,12 @@ Lab/
 ```
 
 Mỗi tệp "SINH VIÊN CÀI ĐẶT" đã có phần triển khai; các nhãn `TODO n`, docstring và pseudo-code gốc được giữ lại để đối chiếu với `GUIDE.md`.
+
+Các tiện ích bổ sung để rà soát báo cáo là `repair_report.py`, `sync_source_metadata.py`,
+`verified_source_metadata.json` và các tệp `audit_*.md`. Kiểm thử offline nằm trong
+`tests/test_lab.py`; chạy bằng `python -m unittest discover -s tests -v`. Khi cần sửa theo kết quả rà soát,
+chạy `python repair_report.py <report-slug> <audit-file.md>`; tiện ích chỉ tải báo cáo và mã kiểm tra lên sandbox,
+không tải `.env`. Để đồng bộ metadata đã xác minh, chạy `python sync_source_metadata.py <report-slug>`.
 
 ## 4. Cài đặt
 

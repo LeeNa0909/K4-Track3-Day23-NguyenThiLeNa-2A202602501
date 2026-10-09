@@ -19,5 +19,10 @@
     "hf-daily",
     "hf-search",
     "web"
-  ]
+  ],
+  "revision": {
+    "reason": "source accuracy audit",
+    "elapsed_s": 46.9,
+    "model_calls": 12
+  }
 }

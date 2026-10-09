@@ -21,5 +21,10 @@
     "arxiv",
     "hf-search",
     "web"
-  ]
+  ],
+  "revision": {
+    "reason": "source accuracy audit",
+    "elapsed_s": 56.4,
+    "model_calls": 12
+  }
 }

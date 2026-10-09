@@ -29,6 +29,15 @@ BODY = ("# Survey\n\n## TL;DR\n- A [1].\n- B [2].\n- C [3].\n\n"
 
 
 class LabChecks(unittest.TestCase):
+    def test_template_requires_cited_summary_background_and_trends(self):
+        report, _, problems = finalize(BODY, SOURCES)
+        self.assertEqual(problems, [])
+        self.assertEqual(research.template_problems(report), [])
+        uncited = report.replace("Context [1].", "Context.").replace("Open issue [3].", "Open issue.")
+        self.assertIn("Background needs at least one supporting citation", research.template_problems(uncited))
+        self.assertIn("Trends and open problems needs at least one supporting citation",
+                      research.template_problems(uncited))
+
     def test_retry_stops_after_last_attempt_and_honors_retry_after(self):
         calls = []
 

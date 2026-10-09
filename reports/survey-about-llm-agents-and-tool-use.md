@@ -22,16 +22,16 @@ The shift from static Retrieval-Augmented Generation (RAG) to active tool orches
 
 *   **Invocation Mechanisms:** Active tool use is triggered via three main methods: in-generation triggers (monitoring tokens for stop sequences), reasoning-acting cycles (e.g., ReAct), and confidence-based invocation where a tool is called only when model certainty falls below a threshold [1][3].
 *   **Tool Learning and Creation:** While early methods relied on fine-tuning (e.g., Toolformer), recent work emphasizes zero-shot use through detailed API documentation [3]. In the "Tool Maker" paradigm (e.g., LATM, CREATOR), agents act as creators by synthesizing their own executable code or APIs to solve novel tasks that lack pre-defined tools [5][6].
-*   **Scaling and Standardization:** Research has shown models like Gorilla can be grounded in documentation to interact with large repositories of RESTful APIs [2]. Emerging standards like the Model Context Protocol (MCP) aim to provide secure, interoperable links between LLMs and external data [10].
+*   **Scaling and Standardization:** Research has shown models like Gorilla can be grounded in documentation to interact with large repositories of RESTful APIs [2].
 
 ## Evaluation Benchmarks and Metrics
 Evaluation has matured from rule-based synthetic tasks to "live," interactive environments that test long-horizon reasoning.
 
-*   **Benchmarks:** Early benchmarks like ToolBench have been superseded by more complex suites such as GAIA (multi-step reasoning) and SWE-bench (software engineering) [10]. Modern interactive benchmarks like Agent-SafetyBench reveal that current models still struggle with safety in dynamic tool environments [8].
-*   **Metrics:** There is a significant imbalance in current evaluation practices. While Attack Success Rate (ASR) is widely reported (cited in 129 papers in one meta-analysis), deployment-critical metrics like Utility, Latency, and Cost are rarely prioritized [7].
+*   **Benchmarks:** Benchmarks like GAIA (multi-step reasoning) and SWE-bench (software engineering) provide complex evaluation suites for agentic capabilities [10]. Modern interactive benchmarks like Agent Security Bench (ASB) reveal that current models still struggle with safety in dynamic tool environments [8].
+*   **Metrics:** There is a significant imbalance in current evaluation practices. While metrics like Attack Success Rate (ASR) are frequently reported, deployment-critical metrics like Utility, Latency, and Cost are often less prioritized in security-focused meta-analyses [7].
 
 ## Trends and open problems
-The field is moving toward multi-agent coordination and multimodal tool use to resolve ambiguities in natural language intent [2][3]. A major trend is the development of "prospective" safety benchmarks (e.g., SafeToolBench) that attempt to detect irreversible harms, such as property damage or privacy leaks, before a tool is executed [7]. Open problems include the lack of standardized abstraction layers for universal APIs, high token costs in long-horizon planning, and the vulnerability of agents to persistent state corruption and multi-agent threat propagation [6][7].
+The field is moving toward multi-agent coordination and multimodal tool use to resolve ambiguities in natural language intent [2][3]. A major trend is the development of safety-centric evaluation frameworks that assess an agent's ability to handle malicious prompts and tool-mediated risks [7][8]. Open problems include the lack of standardized abstraction layers for universal APIs, high token costs in long-horizon planning, and the vulnerability of agents to persistent state corruption and multi-agent threat propagation [6][7].
 
 ## References
 [1] A Review of Prominent Paradigms for LLM-Based Agents: Tool Use, Planning, and Feedback Learning. web. https://arxiv.org/abs/2406.05804 (2024-06-10)

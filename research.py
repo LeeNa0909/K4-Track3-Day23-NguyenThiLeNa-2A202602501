@@ -85,6 +85,31 @@ def summarize(messages, elapsed, model_name):
             "tool_calls": dict(calls), "tokens": tokens}
 
 
+def template_problems(report):
+    """Check the report sections that the citation validator intentionally does not cover."""
+    problems = []
+    if not re.search(r"(?m)^# [^#\n]+$", report):
+        problems.append("report needs a level-one title")
+    headings = re.findall(r"(?m)^## ([^\n]+)$", report)
+    if len(headings) < 4 or headings[:2] != ["TL;DR", "Background"] or headings[-2:] != [
+        "Trends and open problems", "References"
+    ]:
+        problems.append("report headings do not follow REPORT_TEMPLATE order")
+        return problems
+    if not 3 <= len(headings) - 4 <= 6:
+        problems.append("report needs 3 to 6 thematic sections")
+    sections = dict(re.findall(r"(?ms)^## ([^\n]+)\n(.*?)(?=^## |\Z)", report))
+    bullets = re.findall(r"(?m)^\s*[-*]\s+(.+)$", sections.get("TL;DR", ""))
+    if not 3 <= len(bullets) <= 5:
+        problems.append("TL;DR needs 3 to 5 bullets")
+    if any(not re.search(r"\[\d+\]", bullet) for bullet in bullets):
+        problems.append("every TL;DR bullet needs a citation")
+    for heading in ("Background", "Trends and open problems"):
+        if not re.search(r"\[\d+\]", sections.get(heading, "")):
+            problems.append(f"{heading} needs at least one supporting citation")
+    return problems
+
+
 # TODO 4 (completed): validate and download sandbox artifacts.
 def save_outputs(backend, topic, messages, elapsed, model_name, reports_dir=REPORTS):
     """Download the report from the sandbox and write the three files into reports_dir. Return the report path.
@@ -116,15 +141,9 @@ def save_outputs(backend, topic, messages, elapsed, model_name, reports_dir=REPO
             raise RuntimeError(f"arxiv source [{entry['n']}] has a mismatched URL")
         if family in {"hf-daily", "hf-search"} and url != f"https://huggingface.co/papers/{source_id}":
             raise RuntimeError(f"Hugging Face source [{entry['n']}] has a mismatched URL")
-    headings = re.findall(r"(?m)^## ([^\n]+)$", report)
-    required = {"TL;DR", "Background", "Trends and open problems", "References"}
-    missing = sorted(required - set(headings))
-    if missing:
-        raise RuntimeError("report is missing REPORT_TEMPLATE headings: " + ", ".join(missing) +
-                           f"; found: {headings}")
-    themes = [heading for heading in headings if heading not in required]
-    if not 3 <= len(themes) <= 6:
-        raise RuntimeError("report needs 3 to 6 thematic sections")
+    structure_errors = template_problems(report)
+    if structure_errors:
+        raise RuntimeError("report template validation failed: " + "; ".join(structure_errors))
     summary = summarize(messages, elapsed, model_name)
     families = sorted({entry.get("source") for entry in sources if isinstance(entry, dict) and
                        entry.get("source") in {"arxiv", "hf-daily", "hf-search", "web"}})

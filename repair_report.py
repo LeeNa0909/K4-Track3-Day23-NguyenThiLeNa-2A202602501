@@ -16,14 +16,9 @@ from langchain.agents.middleware import ModelCallLimitMiddleware, ToolCallLimitM
 from agents import FINALIZER_PATH, REPORT_PATH, SOURCES_PATH, VALIDATOR_PATH, WORKDIR
 from check_citations import check
 from model import make_model
-from research import FINALIZER_SOURCE, REPORTS, VALIDATOR_SOURCE
+from research import FINALIZER_SOURCE, REPORTS, VALIDATOR_SOURCE, template_problems
 from sandbox import download, open_sandbox, upload
 from tools import web_fetch
-
-
-def tldr_bullets(report):
-    section = re.search(r"(?ms)^## TL;DR\s*\n(.*?)(?=^## |\Z)", report)
-    return re.findall(r"(?m)^\s*[-*]\s+", section.group(1)) if section else []
 
 
 def main(slug, feedback_file):
@@ -79,8 +74,9 @@ Audit findings:
         problems = check(report, sources)
         if problems:
             raise RuntimeError("citation validation failed: " + "; ".join(problems[:5]))
-        if not 3 <= len(tldr_bullets(report)) <= 5:
-            raise RuntimeError("TL;DR must contain 3 to 5 bullets")
+        structure_errors = template_problems(report)
+        if structure_errors:
+            raise RuntimeError("report template validation failed: " + "; ".join(structure_errors))
         families = sorted({item["source"] for item in sources})
         if len(families) < 3:
             raise RuntimeError("fewer than three source families remain")

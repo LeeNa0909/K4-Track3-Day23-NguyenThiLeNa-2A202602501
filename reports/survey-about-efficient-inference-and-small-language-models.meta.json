@@ -23,7 +23,7 @@
   ],
   "revision": {
     "reason": "source accuracy audit",
-    "elapsed_s": 38.6,
-    "model_calls": 7
+    "elapsed_s": 25.8,
+    "model_calls": 6
   }
 }

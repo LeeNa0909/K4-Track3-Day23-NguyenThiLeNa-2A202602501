@@ -19,8 +19,8 @@
     "n": 3,
     "id": "2301.04104",
     "url": "https://arxiv.org/abs/2301.04104",
-    "title": "Mastering diverse control tasks through world models (DreamerV3)",
-    "date": "2025-04-02",
+    "title": "Mastering Diverse Domains through World Models",
+    "date": "2023-01-10",
     "source": "web"
   },
   {
@@ -41,14 +41,6 @@
   },
   {
     "n": 6,
-    "id": "2404.08471",
-    "url": "https://huggingface.co/papers/2404.08471",
-    "title": "V-JEPA: Revisiting Feature Prediction for Learning Visual Representations from Video",
-    "date": "2024-02-15",
-    "source": "hf-search"
-  },
-  {
-    "n": 7,
     "id": "2602.08971",
     "url": "https://huggingface.co/papers/2602.08971",
     "title": "WorldArena: A Unified Benchmark for Evaluating Perception and Functional Utility of Embodied World Models",
@@ -56,7 +48,7 @@
     "source": "hf-search"
   },
   {
-    "n": 8,
+    "n": 7,
     "id": "2605.10434",
     "url": "https://huggingface.co/papers/2605.10434",
     "title": "WorldReasonBench: Human-Aligned Stress Testing of Video Generators",
@@ -64,11 +56,19 @@
     "source": "hf-search"
   },
   {
-    "n": 9,
+    "n": 8,
     "id": "2405.03520",
     "url": "https://huggingface.co/papers/2405.03520",
     "title": "Is Sora a World Simulator? A Comprehensive Survey on General World Models",
     "date": "2024-05-06",
+    "source": "hf-search"
+  },
+  {
+    "n": 9,
+    "id": "2404.08471",
+    "url": "https://huggingface.co/papers/2404.08471",
+    "title": "V-JEPA: Revisiting Feature Prediction for Learning Visual Representations from Video",
+    "date": "2024-02-15",
     "source": "hf-search"
   },
   {
