@@ -7,6 +7,10 @@
     "title": "Mastering Diverse Domains through World Models",
     "date": "2023-01-10"
   },
+  "https://openreview.net/forum?id=1m4cKCr0vx": {
+    "title": "Scaling Laws for Parameter Pruning in LLMs",
+    "date": "n.d.; under review at ICLR 2026"
+  },
   "https://arxiv.org/abs/2401.02385": {
     "title": "TinyLlama: An Open-Source Small Language Model",
     "date": "2024-01-04"

@@ -30,7 +30,7 @@ The trend in SLMs is moving toward inference-aware training, where hardware cons
 [2] Scaling Laws for Fine-Grained Mixture of Experts. arxiv. https://arxiv.org/abs/2402.07871 (2024-02-12)
 [3] QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving. hf-daily. https://huggingface.co/papers/2405.04532 (2024-05-07)
 [4] TinyLlama: An Open-Source Small Language Model. arxiv. https://arxiv.org/abs/2401.02385 (2024-01-04)
-[5] Scaling Laws for Parameter Pruning in LLMs. web. https://openreview.net/forum?id=1m4cKCr0vx (2024-01-01)
+[5] Scaling Laws for Parameter Pruning in LLMs. web. https://openreview.net/forum?id=1m4cKCr0vx (n.d.; under review at ICLR 2026)
 [6] Phi-4 Technical Report. arxiv. https://arxiv.org/abs/2412.08905 (2024-12-12)
 [7] LLM Quantization: GPTQ, AWQ, and GGUF for Efficient Deployment. web. https://calmops.com/algorithms/llm-quantization-gptq-awq-gguf/ (2026-03-19)
 [8] SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving. hf-daily. https://huggingface.co/papers/2604.19157 (2026-04-21)
